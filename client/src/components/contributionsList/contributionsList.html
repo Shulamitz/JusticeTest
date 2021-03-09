@@ -1,0 +1,25 @@
+<div>
+    <!-- ko foreach: contributionsList -->
+    <!-- ko if: $parent.isEditContribution -->
+    <div class="contribution-header pointer arrow-toggle"
+        data-bind="click: $parent.toggleIsOpen.bind($parent), css: {'expanded-contribution': $parent.isOpen}">
+        <div class="border">
+            <label class="bold" data-bind="text: entityName"></label>
+            <label data-bind="text: sum"></label>
+            <div data-bind="disable:$data.owner()!=$parent.loginUser">
+                <button>
+                    <img src="./edit.svg" class="icon">
+                </button>
+                <button>
+                    <img src="./delete.svg" class="icon">
+                </button>
+            </div>
+        </div>
+    </div>
+    <contribution
+        params="contribution: $data,isEditContribution:$parent.isEditContribution,contribution:$parent.contribution,loginUser:$parent.loginUser">
+    </contribution>
+    <!-- /ko -->
+    <!-- /ko -->
+    <button class="col-4" data-bind="click:addContribution()">הוספת תרומה</button>
+</div>

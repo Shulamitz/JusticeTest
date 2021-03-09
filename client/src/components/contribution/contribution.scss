@@ -1,0 +1,75 @@
+contribution {
+    font-family: "Arimo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+
+    b {
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+    div {
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 15px;
+        padding-top: 15px;
+        padding-right: 15px;
+        direction: rtl;
+        display: table;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 3px 1px 10px lightgrey;
+        background: white;
+        width: 50%;
+    }
+    input[type="text"],
+    select {
+        padding: 12px 20px;
+        margin: 8px 8px;
+        display: inline-block;
+        border: 1px solid black;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    input:focus {
+        border: 1px solid #275c7e;
+    }
+
+    .col-4 {
+        width: 22%;
+    }
+    .col-8 {
+        width: 50%;
+    }
+    .col-12 {
+        width: 97.5%;
+    }
+    .validationMessage {
+        font-size: 12px;
+        color: #b20a0a;
+        margin-right: 5px;
+        display: inline;
+    }
+    .required::before {
+        content: "*";
+        color: #b20a0a;
+    }
+    button {
+        direction: ltr;
+        border-radius: 20px;
+        color: #1e6bb6;
+        float: left;
+        height: 45px;
+        margin: 10px;
+        background-color: white;
+        font-size: 18px;
+    }
+    .save {
+        background-color: #1e6bb6;
+        color: white;
+        box-shadow: 3px 3px 3px lightgrey;
+    }
+    button:hover {
+        cursor: pointer;
+    }
+}

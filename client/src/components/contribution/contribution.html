@@ -1,0 +1,32 @@
+<div data-bind="with:contribution,disable:!isEditContribution()">
+    <b>הוספת דיווח על עמותה</b>
+    <br>
+    <input class="col-4" type="text" data-bind="value:entityName" placeholder="שם הישות המדינית הזרה">
+    <span class="validationMessage" style="display: none;"></span>
+
+    <input class="col-4" type="text" data-bind="value:sum" placeholder="סכום התרומה בשח">
+    <span class="validationMessage" style="display: none;"></span>
+
+    <select class="col-8" data-bind="value:entityType" placeholder="סוג הישות המדינית הזרה">
+        <option>פרטי</option>
+        <option>ציבורי</option>
+    </select>
+    <span class="validationMessage" style="display: none;"></span>
+    <br>
+    <input class="col-12" type="text" data-bind="value:destiny" placeholder="יעוד התרומה">
+    <span class="validationMessage" style="display: none;"></span>
+    <br>
+    <input class="col-12" type="text" data-bind="value:condition" placeholder="התנאים לתרומה">
+    <span class="validationMessage" style="display: none;"></span>
+    <br>
+    <select class="col-4" data-bind="value:currencyType" placeholder="סוג הישות המדינית הזרה">
+        <option>דולר</option>
+        <option>שקל</option>
+    </select>
+    <input class="col-4" type="text" data-bind="value:conversionRate" placeholder="שער ההמרה">
+    <span class="validationMessage" style="display: none;"></span>
+   <br>
+   
+   <button class="col-4 save"  data-bind="click:$parent.save">שמירה</button>
+   <button class="col-4 " data-bind="click:$parent.clear">ניקוי</button>
+</div>
